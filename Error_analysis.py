@@ -30,4 +30,4 @@ def get_classification_dfs(X_test_unscaled, y_test, y_pred):
     correct = test_comb[test_comb.y_true == test_comb.y_pred]
     true_positive = correct[correct.y_pred == 1]
     true_negative = correct[correct.y_pred == 0]
-    return true_negative, false_positive, false_negative, true_positives
+    return true_negative, false_positive, false_negative, true_positive
