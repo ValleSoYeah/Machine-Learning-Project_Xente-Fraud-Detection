@@ -10,3 +10,5 @@ scikit-learn==1.0.2
 statsmodels==0.13.1
 pytest==7.0.1
 dataprep==0.4.4
+imbalanced-learn==0.9.1
+imblearn==0.0

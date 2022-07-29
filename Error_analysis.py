@@ -1,9 +1,9 @@
 import pandas as pd
 import numpy as np
 
-def calculate_cost(X_test, y_test, y_pred):
+def calculate_cost(X_test_unscaled, y_test, y_pred):
     '''Calculates the money saved by the model, returns the combined dataframe and the money saved by the model'''
-    test_comb = X_test
+    test_comb = X_test_unscaled.copy()
     test_comb["y_true"] = y_test
     test_comb["y_pred"] = y_pred
     false_positive = test_comb[test_comb.y_true < test_comb.y_pred]
