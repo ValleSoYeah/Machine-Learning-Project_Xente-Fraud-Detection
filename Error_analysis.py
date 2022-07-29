@@ -13,7 +13,10 @@ def calculate_cost(X_test_unscaled, y_test, y_pred):
     true_negative = correct[correct.y_pred == 0]
     reimbursements = false_negative[false_negative.SignAmount == 1].ModAmount.sum()
     avoided_reimbursements = true_positive[true_positive.SignAmount == 1].ModAmount.sum()
+    print(f"You detected {true_positive} fraudulent transactions")
     print(f"You saved the company {round((avoided_reimbursements)/1e6, 2)} Million UGX")
-    print(f"The company still has to reimburse frauds with a total of {round((reimbursements)/1e6, 2)} Million UGX")
+    print(f"You missed {false_negative} fraudulent transactions")
+    print(f"The company now has to reimburse frauds with a total of {round((reimbursements)/1e6, 2)} Million UGX")
     print(f"Total money saved is {round((avoided_reimbursements - reimbursements)/1e6, 2)} Million UGX")
+    print(f"You incorrectly flagged {false_negative} legit transactions as fraudulent")
     #return test_comb, (avoided_reimbursements - reimbursements)
