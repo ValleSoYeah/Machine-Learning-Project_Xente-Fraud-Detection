@@ -1,11 +1,11 @@
+## Project description
+1st Machine learning Project - Week 6 of Data Science Bootcamp @ neuefische GmbH
+
+Goal was the prediction of fraudulent transactions in a highly imbalanced set of financial transcations.  
+Data Source:
+https://zindi.africa/competitions/xente-fraud-detection-challenge
+
 ## Requirements and Environment
-
-Requirements:
-- pyenv with Python: 3.9.8
-
-Environment: 
-
-For installing the virtual environment you can either use the Makefile and run `make setup` or install it manually with the following commands: 
 
 ```Bash
 pyenv local 3.9.8
